@@ -43,8 +43,8 @@ h2{font-size:clamp(34px,4vw,52px);letter-spacing:-.04em;line-height:1.05;margin:
 .problem,.product,.proof{background:rgba(255,255,255,.78);border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:0 10px 35px rgba(65,43,78,.05)}
 .problem b,.product b{display:block;font-size:19px;margin-bottom:10px}.problem p,.product p,.proof p{color:var(--muted);line-height:1.55;margin:0}
 .flow{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
-.flow-card{position:relative;background:linear-gradient(160deg,#fff,#f8f3fa);border:1px solid var(--line);border-radius:26px;padding:30px;min-height:280px}
-.num{font-size:12px;font-weight:900;color:var(--wine);letter-spacing:.1em}.flow-card h3{font-size:28px;margin:18px 0 8px}.question{color:var(--plum);font-weight:800;margin-bottom:20px}.flow-card p{color:var(--muted);line-height:1.55}.result{position:absolute;left:30px;right:30px;bottom:26px;border-top:1px solid var(--line);padding-top:15px;font-weight:700}
+.flow-card{position:relative;background:linear-gradient(160deg,#fff,#f8f3fa);border:1px solid var(--line);border-radius:26px;padding:30px;min-height:280px;display:flex;flex-direction:column;align-items:stretch}
+.num{font-size:12px;font-weight:900;color:var(--wine);letter-spacing:.1em}.flow-card h3{font-size:28px;margin:18px 0 8px}.question{color:var(--plum);font-weight:800;margin-bottom:20px}.flow-card p{color:var(--muted);line-height:1.55}.result{position:static;margin-top:auto;border-top:1px solid var(--line);padding-top:15px;font-weight:700} .flow-card p{margin-bottom:24px}
 .demo{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;margin-top:36px}
 .controls,.model-result{background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:var(--shadow)}
 .control{margin:20px 0}.control label{display:flex;justify-content:space-between;font-weight:700;margin-bottom:10px}.control span{color:var(--plum)}
@@ -54,7 +54,7 @@ input[type=range]{width:100%;accent-color:var(--plum)}
 .mini-kpis{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.mini{padding:15px;border-radius:16px;background:rgba(255,255,255,.09)}.mini small{color:#d6ccdd}.mini strong{display:block;font-size:21px;margin-top:5px}
 .quote{padding:42px;border-radius:28px;background:linear-gradient(135deg,var(--plum),var(--wine),var(--blue));color:#fff;font-size:clamp(24px,3vw,39px);line-height:1.25;letter-spacing:-.025em}
 .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}.portrait{min-height:420px;border-radius:30px;background:linear-gradient(145deg,#e9dfea,#d9d9e9 45%,#cbd5e4);display:flex;align-items:flex-end;padding:28px;color:#51445d;position:relative;overflow:hidden}
-.portrait:before{content:"ЮС";position:absolute;font-size:220px;font-weight:900;opacity:.12;right:-8px;top:40px}.portrait p{max-width:300px;line-height:1.5;z-index:1}
+.portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%}.portrait{padding:0;aspect-ratio:4/5;min-height:0}
 .proof-grid{grid-template-columns:repeat(2,1fr)}.proof strong{font-size:25px;color:var(--plum)}
 .products .product{min-height:220px}.tag{display:inline-block;font-size:12px;font-weight:800;color:var(--wine);background:#f5eaf0;border-radius:999px;padding:7px 10px;margin-bottom:16px}
 .close{text-align:center;padding:90px 0 110px}.close h2{max-width:850px;margin:12px auto 18px}.close .intro{margin:auto}.footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:20px}
@@ -169,7 +169,7 @@ input[type=range]{width:100%;accent-color:var(--plum)}
 
 <section id="about">
 <div class="wrap about">
-  <div class="portrait" aria-label="Место для фотографии Юлии Санниковой"><p>Юлия Санникова<br><b>Финансовые системы для бизнеса</b></p></div>
+  <div class="portrait" aria-label="Портрет Юлии Санниковой"><img src="yulia-portrait.png" alt="Юлия Санникова" loading="lazy"></div>
   <div>
     <div class="section-kicker">Кто строит систему</div>
     <h2>Юлия Санникова</h2>
