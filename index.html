@@ -7,22 +7,22 @@
 <meta name="description" content="Управленческий учёт, финансовые дашборды и интерактивные финансовые модели для собственников бизнеса.">
 <style>
 :root{
-  --ink:#241b33; --muted:#71677d; --paper:#fbf9fc; --card:#ffffff;
-  --plum:#5e3a72; --wine:#7b3f5b; --blue:#526b91; --lav:#eee8f3;
-  --line:#e8e0eb; --shadow:0 18px 60px rgba(65,43,78,.10);
+  --ink:#1c2f52; --muted:#65718a; --paper:#f8faff; --card:#ffffff;
+  --plum:#55467f; --wine:#741b4b; --blue:#284776; --lav:#eeeaf7;
+  --line:#dfe4f0; --shadow:0 18px 60px rgba(35,59,103,.10);
 }
 *{box-sizing:border-box} html{scroll-behavior:smooth}
 body{margin:0;background:
-radial-gradient(circle at 8% 4%,rgba(126,91,151,.13),transparent 25%),
-radial-gradient(circle at 92% 16%,rgba(82,107,145,.12),transparent 24%),
+radial-gradient(circle at 8% 4%,rgba(116,27,75,.055),transparent 25%),
+radial-gradient(circle at 92% 16%,rgba(40,71,118,.14),transparent 24%),
 var(--paper); color:var(--ink); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
 a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
-nav{position:sticky;top:0;z-index:10;backdrop-filter:blur(16px);background:rgba(251,249,252,.82);border-bottom:1px solid rgba(232,224,235,.75)}
+nav{position:sticky;top:0;z-index:10;backdrop-filter:blur(16px);background:rgba(248,250,255,.88);border-bottom:1px solid rgba(223,228,240,.75)}
 .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{font-weight:800;letter-spacing:-.02em}.brand span{color:var(--wine)}
 .links{display:flex;gap:22px;font-size:14px;color:var(--muted)}
 .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:14px;padding:13px 18px;font-weight:700;border:1px solid var(--line);background:#fff;box-shadow:0 8px 30px rgba(65,43,78,.05)}
-.btn.primary{color:white;border:0;background:linear-gradient(135deg,var(--plum),var(--wine) 58%,var(--blue))}
+.btn.primary{color:white;border:0;background:linear-gradient(115deg,var(--wine),var(--blue))}
 .hero{padding:92px 0 72px;display:grid;grid-template-columns:1.03fr .97fr;gap:60px;align-items:center}
 .eyebrow{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--wine)}
 h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.055em;margin:18px 0 24px;max-width:780px}
@@ -43,16 +43,16 @@ h2{font-size:clamp(34px,4vw,52px);letter-spacing:-.04em;line-height:1.05;margin:
 .problem,.product,.proof{background:rgba(255,255,255,.78);border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:0 10px 35px rgba(65,43,78,.05)}
 .problem b,.product b{display:block;font-size:19px;margin-bottom:10px}.problem p,.product p,.proof p{color:var(--muted);line-height:1.55;margin:0}
 .flow{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
-.flow-card{position:relative;background:linear-gradient(160deg,#fff,#f8f3fa);border:1px solid var(--line);border-radius:26px;padding:30px;min-height:280px;display:flex;flex-direction:column;align-items:stretch}
+.flow-card{position:relative;background:linear-gradient(160deg,#fff,#f5f7fd);border:1px solid var(--line);border-radius:26px;padding:30px;min-height:280px;display:flex;flex-direction:column;align-items:stretch}
 .num{font-size:12px;font-weight:900;color:var(--wine);letter-spacing:.1em}.flow-card h3{font-size:28px;margin:18px 0 8px}.question{color:var(--plum);font-weight:800;margin-bottom:20px}.flow-card p{color:var(--muted);line-height:1.55}.result{position:static;margin-top:auto;border-top:1px solid var(--line);padding-top:15px;font-weight:700} .flow-card p{margin-bottom:24px}
 .demo{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;margin-top:36px}
 .controls,.model-result{background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:var(--shadow)}
 .control{margin:20px 0}.control label{display:flex;justify-content:space-between;font-weight:700;margin-bottom:10px}.control span{color:var(--plum)}
 input[type=range]{width:100%;accent-color:var(--plum)}
-.model-result{background:linear-gradient(145deg,#33253f,#59364d 55%,#405879);color:#fff}
+.model-result{background:linear-gradient(120deg,#253d66,#384e7a 65%,#623758);color:#fff}
 .model-result .big{font-size:56px;letter-spacing:-.05em;font-weight:850;margin:8px 0}.model-result p{color:#ddd4e4}
 .mini-kpis{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.mini{padding:15px;border-radius:16px;background:rgba(255,255,255,.09)}.mini small{color:#d6ccdd}.mini strong{display:block;font-size:21px;margin-top:5px}
-.quote{padding:42px;border-radius:28px;background:linear-gradient(135deg,var(--plum),var(--wine),var(--blue));color:#fff;font-size:clamp(24px,3vw,39px);line-height:1.25;letter-spacing:-.025em}
+.quote{padding:42px;border-radius:28px;background:linear-gradient(115deg,var(--wine),var(--blue));color:#fff;font-size:clamp(24px,3vw,39px);line-height:1.25;letter-spacing:-.025em}
 .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}.portrait{min-height:420px;border-radius:30px;background:linear-gradient(145deg,#e9dfea,#d9d9e9 45%,#cbd5e4);display:flex;align-items:flex-end;padding:28px;color:#51445d;position:relative;overflow:hidden}
 .portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%}.portrait{padding:0;aspect-ratio:4/5;min-height:0}
 .proof-grid{grid-template-columns:repeat(2,1fr)}.proof strong{font-size:25px;color:var(--plum)}
@@ -128,20 +128,21 @@ input[type=range]{width:100%;accent-color:var(--plum)}
 <div class="wrap">
   <div class="section-kicker">Мини-демо</div>
   <h2>Проверьте решение на модели</h2>
-  <p class="intro">Демонстрационная модель на условных данных. Измените параметры — результат пересчитается прямо на странице.</p>
+  <p class="intro">Демонстрационная модель на условных данных, без отдельного расчёта налогов и процентов. Измените параметры — результат пересчитается прямо на странице.</p>
   <div class="demo">
     <div class="controls">
-      <div class="control"><label>Выручка <span id="revLabel">25,0 млн ₽</span></label><input id="rev" type="range" min="15" max="45" step="1" value="25"></div>
-      <div class="control"><label>ФОТ <span id="payLabel">7,0 млн ₽</span></label><input id="pay" type="range" min="4" max="13" step=".5" value="7"></div>
-      <div class="control"><label>Маркетинг <span id="mktLabel">1,5 млн ₽</span></label><input id="mkt" type="range" min=".5" max="5" step=".25" value="1.5"></div>
+      <div class="control"><label for="rev">Выручка <span id="revLabel">30,0 млн ₽</span></label><input id="rev" type="range" min="5" max="100" step="0.5" value="30"></div>
+      <div class="control"><label for="cost">Себестоимость <span id="costLabel">40%</span></label><input id="cost" type="range" min="10" max="80" step="1" value="40"></div>
+      <div class="control"><label for="pay">ФОТ <span id="payLabel">8,0 млн ₽</span></label><input id="pay" type="range" min="1" max="50" step="0.5" value="8"></div>
+      <div class="control"><label for="fixed">Постоянные расходы <span id="fixedLabel">5,0 млн ₽</span></label><input id="fixed" type="range" min="1" max="50" step="0.5" value="5"></div>
       <p style="color:var(--muted);line-height:1.55">В реальном проекте здесь будут именно те драйверы, которыми управляет ваш бизнес.</p>
     </div>
     <div class="model-result">
-      <small>Расчётная чистая прибыль</small><div class="big" id="profit">3,0 млн ₽</div>
+      <small>Расчётная чистая прибыль</small><div class="big" id="profit">5,0 млн ₽</div>
       <p id="comment">При текущем сценарии модель остаётся прибыльной.</p>
       <div class="mini-kpis">
-        <div class="mini"><small>Рентабельность</small><strong id="margin">12,0%</strong></div>
-        <div class="mini"><small>Точка безубыточности</small><strong id="be">21,6 млн ₽</strong></div>
+        <div class="mini"><small>Рентабельность</small><strong id="margin">16,7%</strong></div>
+        <div class="mini"><small>Точка безубыточности</small><strong id="be">21,7 млн ₽</strong></div>
       </div>
     </div>
   </div>
@@ -206,27 +207,32 @@ input[type=range]{width:100%;accent-color:var(--plum)}
 <div class="wrap footer"><span>© 2026 Юлия Санникова</span><span>Финансовые системы · Дашборды · Финансовые модели</span></div>
 
 <script>
-const rev=document.getElementById('rev'),pay=document.getElementById('pay'),mkt=document.getElementById('mkt');
+const rev=document.getElementById('rev');
+const cost=document.getElementById('cost');
+const pay=document.getElementById('pay');
+const fixed=document.getElementById('fixed');
 const fmt=n=>n.toFixed(1).replace('.',',')+' млн ₽';
 function calc(){
-  const r=+rev.value,p=+pay.value,m=+mkt.value;
-  document.getElementById('revLabel').textContent=fmt(r);
-  document.getElementById('payLabel').textContent=fmt(p);
-  document.getElementById('mktLabel').textContent=fmt(m);
-  const variable=r*.34, other=5.0, tax=Math.max(0,r-variable-p-m-other)*.12;
-  const profit=r-variable-p-m-other-tax;
+  const r=Number(rev.value), c=Number(cost.value)/100;
+  const p=Number(pay.value), f=Number(fixed.value);
+  const costAmount=r*c;
+  const profit=r-costAmount-p-f;
   const margin=profit/r*100;
-  const fixed=p+m+other;
-  const be=fixed/(1-.34-.12*(1-.34));
+  const breakEven=(p+f)/(1-c);
+  document.getElementById('revLabel').textContent=fmt(r);
+  document.getElementById('costLabel').textContent=cost.value+'%';
+  document.getElementById('payLabel').textContent=fmt(p);
+  document.getElementById('fixedLabel').textContent=fmt(f);
   document.getElementById('profit').textContent=fmt(profit);
   document.getElementById('margin').textContent=margin.toFixed(1).replace('.',',')+'%';
-  document.getElementById('be').textContent=fmt(be);
-  document.getElementById('comment').textContent=profit>2
-    ?'Сценарий выглядит устойчиво: есть запас прибыли для дальнейших решений.'
-    :profit>0?'Бизнес остаётся прибыльным, но запас прочности уже небольшой.'
-    :'В этом сценарии модель уходит в убыток — параметры стоит пересмотреть.';
+  document.getElementById('be').textContent=fmt(breakEven);
+  document.getElementById('comment').textContent=profit>0
+    ?'При заданных параметрах бизнес прибыльный. Измените расходы или выручку, чтобы проверить другой сценарий.'
+    :profit===0?'При заданных параметрах бизнес находится в точке безубыточности.'
+    :'При заданных параметрах бизнес убыточен. Измените показатели, чтобы проверить другой сценарий.';
 }
-[rev,pay,mkt].forEach(x=>x.addEventListener('input',calc)); calc();
+[rev,cost,pay,fixed].forEach(x=>x.addEventListener('input',calc));
+calc();
 </script>
 </body>
 </html>
