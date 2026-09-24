@@ -60,13 +60,26 @@ input[type=range]{width:100%;accent-color:var(--plum)}
 .close{text-align:center;padding:90px 0 110px}.close h2{max-width:850px;margin:12px auto 18px}.close .intro{margin:auto}.footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:20px}
 @media(max-width:850px){.links{display:none}.hero,.demo,.about{grid-template-columns:1fr}.hero{padding-top:60px}.dashboard{transform:none}.problem-grid,.product-grid,.flow{grid-template-columns:1fr}.proof-grid{grid-template-columns:1fr 1fr}h1{font-size:50px}}
 @media(max-width:520px){.wrap{width:min(100% - 24px,1160px)}.proof-grid,.kpis{grid-template-columns:1fr}.footer{flex-direction:column}.quote{padding:28px}}
+
+/* Форма обратной связи */
+.request-section{padding:75px 0;background:linear-gradient(145deg,#f0f4fb,#fbfcff)}
+.request-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+.request-form{background:#fff;border:1px solid var(--line);border-radius:26px;padding:30px;box-shadow:var(--shadow);text-align:left}
+.request-form label.field{display:block;font-size:14px;font-weight:700;margin:0 0 8px}
+.request-form input:not([type=checkbox]),.request-form select,.request-form textarea{display:block;width:100%;font:inherit;color:var(--ink);background:#f7f9fd;border:1px solid #dce3f0;border-radius:12px;padding:14px 15px;margin-bottom:17px;outline-offset:3px}
+.request-form textarea{min-height:112px;resize:vertical}.request-form input:focus,.request-form select:focus,.request-form textarea:focus{border-color:var(--blue)}
+.request-form .consent{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.5;color:var(--muted);margin:4px 0 20px}.request-form .consent input{margin-top:3px;accent-color:var(--blue)}
+.request-form button{font:inherit;cursor:pointer;width:100%}.request-note{font-size:13px;color:var(--muted);line-height:1.5;margin-top:12px}
+.request-form .trap{position:absolute;left:-9999px;opacity:0;pointer-events:none}
+@media(max-width:850px){.request-layout{grid-template-columns:1fr;gap:22px}}
+@media(max-width:520px){.request-form{padding:20px}}
 </style>
 </head>
 <body>
 <nav><div class="wrap nav">
   <a class="brand" href="#">Юлия <span>Санникова</span></a>
   <div class="links"><a href="#approach">Как работаю</a><a href="#products">Решения</a><a href="#about">Обо мне</a></div>
-  <a class="btn primary" href="#contact">Обсудить задачу</a>
+  <a class="btn primary" href="#request">Оставить заявку</a>
 </div></nav>
 
 <main>
@@ -191,6 +204,52 @@ input[type=range]{width:100%;accent-color:var(--plum)}
   <h2>Хорошая финансовая система не должна делать бизнес зависимым от её создателя.</h2>
   <p class="intro">Я проектирую систему, передаю её компании и обучаю работе с ней. При необходимости остаюсь на ежемесячном контроле — но инструмент принадлежит вашему бизнесу.</p>
 </div>
+</section>
+
+
+<section id="request" class="request-section">
+  <div class="wrap request-layout">
+    <div>
+      <div class="section-kicker">Связаться со мной</div>
+      <h2>Оставить заявку или задать вопрос</h2>
+      <p class="intro">Коротко расскажите о своей задаче — я отвечу вам по выбранному способу связи.</p>
+      <p class="request-note">Если удобнее написать напрямую, <a href="https://vk.ru/yulia.finance" target="_blank" rel="noopener noreferrer" style="color:var(--wine);text-decoration:underline">свяжитесь со мной во ВКонтакте</a>.</p>
+    </div>
+    <form class="request-form" action="https://formsubmit.co/findir.yulia@gmail.com" method="POST" accept-charset="UTF-8">
+      <input type="hidden" name="_subject" value="Новая заявка с сайта Юлии Санниковой">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="true">
+      <input class="trap" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="field" for="request-name">Ваше имя *</label>
+      <input id="request-name" name="Имя" type="text" autocomplete="name" placeholder="Как к вам обращаться" required maxlength="100">
+      <label class="field" for="request-phone">Телефон</label>
+      <input id="request-phone" name="Телефон" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" maxlength="40">
+      <label class="field" for="request-email">Email *</label>
+      <input id="request-email" name="Email" type="email" autocomplete="email" placeholder="name@example.com" required maxlength="150">
+      <label class="field" for="request-task">С какой задачей обращаетесь? *</label>
+      <select id="request-task" name="Задача" required>
+        <option value="" disabled selected>Выберите вариант</option>
+        <option>Настроить управленческий учёт</option>
+        <option>Создать дашборд</option>
+        <option>Разработать финансовую модель</option>
+        <option>Провести финансовый аудит</option>
+        <option>Другая задача / пока не знаю</option>
+      </select>
+      <label class="field" for="request-channel">Как с вами удобнее связаться? *</label>
+      <select id="request-channel" name="Предпочтительный способ связи" required>
+        <option value="" disabled selected>Выберите вариант</option>
+        <option>По электронной почте</option>
+        <option>По телефону</option>
+        <option>ВКонтакте</option>
+        <option>Telegram</option>
+      </select>
+      <label class="field" for="request-message">Ваш вопрос *</label>
+      <textarea id="request-message" name="Вопрос" placeholder="Расскажите немного о вашей компании и задаче" required maxlength="3000"></textarea>
+      <label class="consent"><input type="checkbox" name="Согласие на обработку данных" value="Да" required><span>Согласен(на) на обработку указанных мной контактных данных для ответа на обращение и их передачу сервису отправки формы FormSubmit.</span></label>
+      <button class="btn primary" type="submit">Отправить заявку</button>
+      <p class="request-note">Поля со звёздочкой обязательны. Отправка происходит через сторонний сервис FormSubmit; после первого подключения владельцу сайта нужно подтвердить адрес почты.</p>
+    </form>
+  </div>
 </section>
 
 <section id="contact" class="close">
